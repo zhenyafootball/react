@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 export default function Flights() {
-    let [fligtsList, setFlightsList] = useState ([]);
+    const [fligtsList, setFlightsList] = useState ([]);
     useEffect(() =>{
         fetch('https://api.spacexdata.com/v3/launches')
             .then(value => value.json())
