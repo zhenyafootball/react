@@ -31,7 +31,7 @@ function App() {
    }, []);
     return (
         <div>
-            <div className="user">
+            <div className="users">
          <ul>
              {
              users.map(value => <li key={value.id}> {value.name}</li>)
