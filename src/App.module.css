@@ -1,0 +1,4 @@
+.formWrap{
+  display: flex;
+  justify-content: space-around;
+}
