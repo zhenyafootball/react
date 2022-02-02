@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    background: black;
+    padding: 10px;
+}
+
+a {
+    color: snow;
+}
+
+.header a[class='active'] {
+    color: red;
+    text-decoration: underline;
+}

@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Routes, Route} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import CarsPage from "./Pages/CarsPage/CarsPage";
+import Layout from "./Components/Layout/Layout";
+import UsersPage from './Pages/UsersPage/UsersPage'
+import PostsPage from "./Pages/PostsPage/PostPage";
+import CommentsPage from "./Pages/CommentsPage/CommentsPage";
+import UserDetails from "./Components/UserDetails/UserDetail";
+
+
+const App = () => {
+
+    return (
+        <>
+            <Routes>
+                <Route path={'/'} element={<Layout/>}>
+                    <Route path={'/cars'} element={<CarsPage/>}/>
+                    <Route path={'/users'} element={<UsersPage/>}>
+                        <Route path={':id'} element={<UserDetails/>}/>
+                    </Route>
+                    <Route path={'/posts'} element={<PostsPage/>}/>
+                    <Route path={'/comments'} element={<CommentsPage/>}/>
+
+                </Route>
+
+            </Routes>
+
+        </>);
+};
 
 export default App;
