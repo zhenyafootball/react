@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {getAllCommentsThunk} from "../../Slices/CommentSlice/CommentSlice";
+import {getAllCommentsThunk} from "../../Slices/CommentsSlice/CommentSlice";
 import Comment from "../../Components/Comment/Comment";
 
 const CommentsPage = () => {
@@ -11,7 +11,7 @@ const CommentsPage = () => {
 
     useEffect(() => {
         dispatch(getAllCommentsThunk())
-    }, []);
+    }, [dispatch]);
 
 
     return (

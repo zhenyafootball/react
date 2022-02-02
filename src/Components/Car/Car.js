@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from "react-redux";
-import {deleteCar, deleteCarThunk, getCarId} from "../../Slices/CarsSlice/CarsSlice";
+import {deleteCarThunk, getCarId} from "../../Slices/CarsSlice/CarsSlice";
 
 const Car = ({car: {id, model, year, price}}) => {
 

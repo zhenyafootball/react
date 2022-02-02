@@ -14,7 +14,7 @@ const CarsPage = () => {
 
     useEffect(() => {
         dispatch(getAllCars())
-    }, [])
+    }, [dispatch])
 
     return (
         <>

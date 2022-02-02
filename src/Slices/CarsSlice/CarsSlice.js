@@ -70,7 +70,7 @@ const carsSlice = createSlice({
 
     },
     extraReducers: {
-        [getAllCars.pending]: (state, action) => {
+        [getAllCars.pending]: (state) => {
             state.status = 'pending';
             state.error = null;
 

@@ -11,7 +11,7 @@ const PostsPage = () => {
 
     useEffect(() => {
         dispatch(getAllPostsThunk());
-    }, [])
+    }, [dispatch])
 
 
     return (

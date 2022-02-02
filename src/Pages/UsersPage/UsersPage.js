@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Outlet} from "react-router-dom";
 
 
-import {getAllUsersThunk} from "../../Slices/UserSlice/UserSlice";
+import {getAllUsersThunk} from "../../Slices/UsersSlice/UsersSlice";
 import User from "../../Components/User/User";
 
 const UsersPage = () => {
@@ -13,7 +13,7 @@ const UsersPage = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getAllUsersThunk())
-    }, [])
+    }, [dispatch])
 
 
     return (
